@@ -1,6 +1,6 @@
 import {Container, ContactButton, PostList } from './tabBar.Styled';
 
-export default function Header() {
+export default function TabBar() {
   return(
     <Container>
       <ContactButton></ContactButton>
