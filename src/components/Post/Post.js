@@ -1,19 +1,24 @@
-import {Container, Image, ArtistName, Title, Article} from './Post.Styled'
-import Castelo from '../../../assets/orfanato-alemanha.jpeg'
+import {Container, Image, ArtistName, Title, Article, BoxImage, BoxText, BoxArticle} from './Post.Styled'
 
 export default function Post (props) {
   console.log(props, '33333');
   return (
     <Container>
-      <Image
-        source={{
-          uri: props.imageUrl,
-        }}
-      >
-      </Image>
-      <ArtistName>{props.author}</ArtistName>
-      <Title>{props.title}</Title>
-      <Article>{props.article}</Article>
+      <BoxImage>
+        <Image
+          source={{
+            uri: props.imageUrl,
+          }}
+        >
+        </Image>
+      </BoxImage>
+      <BoxText>    
+        <ArtistName>{props.author}</ArtistName>
+        <Title>{props.title}</Title>
+      </BoxText> 
+      <BoxArticle> 
+        <Article>{props.article.replace('<p>', '')}</Article>
+      </BoxArticle>  
     </Container>
   )
 }

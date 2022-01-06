@@ -3,9 +3,11 @@ import styled from "styled-components/native";
 export const Container = styled.SafeAreaView`
   background-color: #000;
   height: 60px;
+  margin-top: 113%;
   width: 100%;
   flex-direction: row;
   align-items: center;
+  justify-content: flex-end;
   justify-content: center;
   justify-content: space-evenly;
 `;
