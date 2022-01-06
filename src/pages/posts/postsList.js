@@ -27,7 +27,6 @@ export default function PostList () {
 
   return (
     <Container>
-      <Header/>
         <ListPost>
           {posts.map(post => 
             <BoxPost key={post.id} {...post} 

@@ -21,11 +21,11 @@ export const BoxImage = styled.View`
   `;
 
 export const BoxText = styled.View`
-  height: 50%;
-  width: 50%;
-  margin-left: 120px;
+  height: 60%;
+  width: 60%;
+  margin-left: 150px;
+  align-items: flex-start;
 `;
-
 
 export const ArtistName = styled.Text`
   font-size: 14px;
@@ -38,17 +38,15 @@ export const Title = styled.Text`
   font-weight: bold;
   `;
 
-  export const BoxArticle = styled.View`
-    height: 80px;
-    width: 55%;
-    margin-left: 160px;
-    margin-top: 10px;
+export const BoxArticle = styled.View`
+  height: 60%;
+  width: 60%;
+  margin-left: 150px;
+  align-items: flex-start;
+  flex-wrap: wrap;
   `;
 
-export const Article = styled.Text.attrs(() => ({
-  ellipsizeMode: 'head',
-  numberOdLines: 2,
-}))`
+export const Article = styled.Text`
   color: #2d2d2d;
   font-size: 16px;
   text-align: justify;

@@ -1,14 +1,33 @@
 import {Container, ContactButton, PostList } from './tabBar.Styled';
 import {MaterialIcons} from '@expo/vector-icons';
+import {useNavigation} from '@react-navigation/native'
 
 export default function TabBar() {
+  const navigation = useNavigation();
+
+  function handleNavigatePostList() {
+    navigation.navigate('PostList');
+  }
+
+  function handleNavigateContact() {
+    navigation.navigate('Contact');
+  }
+
   return(
     <Container>
       <PostList>
-        <MaterialIcons name='message' size={30} color="#f39a4a"/>
+        <MaterialIcons
+          onPress={handleNavigatePostList}
+          name='message'
+          size={30}
+          color="#f39a4a"/>
       </PostList>
       <ContactButton>
-        <MaterialIcons name='reorder' size={30} color="#f39a4a"/>
+        <MaterialIcons 
+          onPress={handleNavigateContact}
+          name='reorder'
+          size={30}
+          color="#f39a4a"/>
       </ContactButton>
     </Container>
   )

@@ -13,10 +13,30 @@ export default function Routes() {
         <Screen 
           name="PostList"
           component={PostList}
+          options={{
+            title: 'Post List',
+            headerStyle: {
+              backgroundColor: '#333333',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
         />
         <Screen 
           name="Contact"
           component={Contact}
+          options={{
+            title: 'Contact',
+            headerStyle: {
+              backgroundColor: '#333333',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
         />
       </Navigator>
     </NavigationContainer>
