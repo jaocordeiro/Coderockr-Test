@@ -19,6 +19,14 @@
   - O **Axios** é uma biblioteca para requisições HTTP.
   - No projeto, foi utilizada para trazer as informações da API.
 ---
+
+<h2><b><br/>Imagens do App</b></h2><br/>
+
+<p align="center"><img width="270" height="570" src="src/assets/home.png"></p>
+<p align="center"><img width="270" height="570" src="src/assets/details.png"></p>
+<p align="center"><img width="270" height="570" src="src/assets/contact.png"></p>
+
+---
 <h2><b><br/>Requisitos para rodar o projeto</b></h2>
 
 - **Node.js** - version >= `16.5.0`

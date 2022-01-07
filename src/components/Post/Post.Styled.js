@@ -6,14 +6,14 @@ export const ViewContainer = styled.TouchableOpacity`
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 10px;
-  padding-top: 1px;
+  padding-top: 0px;
 `;
 
 export const Container = styled.View`
   width: 100%;
   height: 100%;
   flex-direction: row;
-  background: #e0e0e0;
+  background: #eaeaea;
   padding-top: 1px;
 `;
 
