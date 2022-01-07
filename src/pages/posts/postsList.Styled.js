@@ -8,7 +8,6 @@ export const Container = styled.SafeAreaView`
   flex-direction: column;
 `;
 
-export const ListPost = styled.View`
-  color: red;
-  font-size: 16px;
+export const ListPost = styled.FlatList`
+  width: 100%;
 `;

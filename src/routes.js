@@ -5,6 +5,7 @@ const {Navigator, Screen} = createStackNavigator();
 
 import PostList from './pages/posts/postsList';
 import Contact from './pages/contact/contact';
+import Details from './pages/details/details';
 
 export default function Routes() {
   return(
@@ -29,6 +30,20 @@ export default function Routes() {
           component={Contact}
           options={{
             title: 'Contact',
+            headerStyle: {
+              backgroundColor: '#333333',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Screen 
+          name="Details"
+          component={Details}
+          options={{
+            title: 'Details',
             headerStyle: {
               backgroundColor: '#333333',
             },

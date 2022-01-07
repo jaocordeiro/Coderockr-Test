@@ -1,11 +1,16 @@
 import {React, useState, useEffect} from 'react';
-import {Container, ListPost} from './postsList.Styled'
-import Header from '../../components/Header/header';
+import {Container, ListPost, PostDetails} from './postsList.Styled'
 import TabBar from '../../components/TabBar/tabBar';
 import api from '../../services/api';
 import BoxPost from '../../components/Post/Post';
+import { useNavigation } from '@react-navigation/native';
 
 export default function PostList () {
+  const navigation = useNavigation
+
+  function handlePageDetails () {
+    navigation.navigate('Details');
+  }
 
   const [posts, setPosts] = useState([])
   const [page, setPage] = useState(1)
@@ -13,12 +18,12 @@ export default function PostList () {
   async function postList() {
     const response = await api.get('/articles', {
       params: {
-        _page: 1,
-        _limit: 1,
+        _page: page,
+        _limit: 7,
       },
     });
-    setPosts(response.data)
-    console.log(response.data, 'joao');
+    setPosts((oldPosts) => [...oldPosts, ...response.data])
+    setPage(page + 1);
   }
 
   useEffect(() => {
@@ -27,12 +32,18 @@ export default function PostList () {
 
   return (
     <Container>
-        <ListPost>
-          {posts.map(post => 
-            <BoxPost key={post.id} {...post} 
-            />
-          )}
-        </ListPost>
+      <ListPost 
+        data={posts}
+        renderItem={({item: post}) =>
+          <BoxPost {...post}/>}
+        <>
+          <PostDetails onPress={() => handlePageDetails()}>
+          
+          </PostDetails>
+        </>
+        
+      />
+          
       <TabBar/>
     </Container>
   )
