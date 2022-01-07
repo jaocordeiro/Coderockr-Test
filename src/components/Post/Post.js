@@ -13,12 +13,12 @@ import {useNavigation} from '@react-navigation/native'
 export default function Post (props) {
   const navigation = useNavigation();
 
-  function handlePageDetails() {
-    navigation.navigate('Details');
+  function handlePageDetails (props) {
+    navigation.navigate('Details', {props});
   }
 
   return (
-    <ViewContainer onPress={handlePageDetails}>
+    <ViewContainer onPress={() => handlePageDetails (props)}>
       <Container>
         <BoxImage>
           <Image

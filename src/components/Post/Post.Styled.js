@@ -13,7 +13,7 @@ export const Container = styled.View`
   height: 100%;
   flex-direction: row;
   flex-wrap: wrap;
-  background: #c9c7c7;
+  background: #e0e0e0;
 `;
 
 export const BoxImage = styled.View`
@@ -31,7 +31,7 @@ export const BoxImage = styled.View`
 export const BoxText = styled.View`
   height: 60%;
   width: 60%;
-  margin-left: 10px;
+  padding: 8px 0 0 10px
 `;
 
 export const ArtistName = styled.Text`
