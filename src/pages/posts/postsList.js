@@ -1,16 +1,10 @@
 import {React, useState, useEffect} from 'react';
-import {Container, ListPost, PostDetails} from './postsList.Styled'
+import {Container, ListPost} from './postsList.Styled'
 import TabBar from '../../components/TabBar/tabBar';
 import api from '../../services/api';
 import BoxPost from '../../components/Post/Post';
-import { useNavigation } from '@react-navigation/native';
 
 export default function PostList () {
-  const navigation = useNavigation
-
-  function handlePageDetails () {
-    navigation.navigate('Details');
-  }
 
   const [posts, setPosts] = useState([])
   const [page, setPage] = useState(1)
@@ -34,16 +28,9 @@ export default function PostList () {
     <Container>
       <ListPost 
         data={posts}
-        renderItem={({item: post}) =>
-          <BoxPost {...post}/>}
-        <>
-          <PostDetails onPress={() => handlePageDetails()}>
-          
-          </PostDetails>
-        </>
-        
+        renderItem={({item: post}) => (
+          <BoxPost {...post} />)}
       />
-          
       <TabBar/>
     </Container>
   )

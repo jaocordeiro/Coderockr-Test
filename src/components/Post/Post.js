@@ -1,4 +1,3 @@
-import { View, StyleSheet } from 'react-native';
 import {
   ViewContainer,
   Container,
@@ -9,11 +8,17 @@ import {
   BoxImage,
   BoxText,
   } from './Post.Styled'
+import {useNavigation} from '@react-navigation/native'
 
 export default function Post (props) {
-  console.log(props, '33333');
+  const navigation = useNavigation();
+
+  function handlePageDetails() {
+    navigation.navigate('Details');
+  }
+
   return (
-    <ViewContainer>
+    <ViewContainer onPress={handlePageDetails}>
       <Container>
         <BoxImage>
           <Image

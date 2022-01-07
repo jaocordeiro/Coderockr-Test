@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-export const ViewContainer = styled.SafeAreaView`
+export const ViewContainer = styled.TouchableOpacity`
   flex: 1;
   width: 100%;
   margin-top: 10px;
