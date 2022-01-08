@@ -1,16 +1,16 @@
-<h2><b>Sobre</b></h2><br/>
+<h2><b>✏️ Sobre</b></h2><br/>
 
 ## Teste para desenvolvedor [Coderockr](https://github.com/Coderockr)
 
 <b>Conectando a API</b> https://stormy-shelf-93141.herokuapp.com/
 
 ---
-<h2><b><br/>Resultado final da aplicação</b></h2><br/>
+<h2><b><br/>📱Resultado final da aplicação</b></h2><br/>
 <p align="center"><img width="270" height="570" src="src/assets/app.gif"></p>
 
 ---
 
-<h2><b><br/>Bibliotecas utilizadas no projeto</b></h2>
+<h2><b><br/> 👨🏼‍💻 Bibliotecas utilizadas no projeto</b></h2>
 
 - [React Native](https://reactnative.dev/)
   - O framework **React Native** é utilizado para o desenvolvimento de aplicativos hibridos de forma nativa com JavaScript, dessa forma rodando o mesmo código em Android e IOS ao ser compilado.
@@ -28,21 +28,21 @@
   - No projeto, foi utilizada para trazer as informações da API.
 ---
 
-<h2><b><br/>Imagens do App</b></h2><br/>
+<h2><b><br/>📸 Imagens do App</b></h2><br/>
 
 <p align="center"><img width="270" height="570" src="src/assets/home.png"></p>
 <p align="center"><img width="270" height="570" src="src/assets/details.png"></p>
 <p align="center"><img width="270" height="570" src="src/assets/contact.png"></p>
 
 ---
-<h2><b><br/>Requisitos para rodar o projeto</b></h2>
+<h2><b><br/>💻 Requisitos para rodar o projeto</b></h2>
 
 - **Node.js** - version >= `16.5.0`
 - **Yarn ou NPM** - version >= `7.19.1`
 - **Expo** - version >= `44.0.0`
 
 ---
-<h2><b><br/>Como iniciar o Projeto:</b></h2>
+<h2><b><br/>📲 Como iniciar o Projeto:</b></h2>
 
 1. Efetuar o clone deste repositório, colando em seu terminal, o seguinte comando: `git clone https://github.com/jaocordeiro/Coderockr-Test.git`
 
@@ -50,3 +50,6 @@
 
 3. A aplicação será iniciada com o comando: `npm start` ou `yarn start`
 
+---
+
+<br/><h2><b><p align="center">Obrigado 😃</p></b><h2>
