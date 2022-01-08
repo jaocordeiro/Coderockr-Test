@@ -18,14 +18,14 @@ export default function TabBar() {
       <PostList>
         <MaterialIcons
           onPress={handleNavigatePostList}
-          name='message'
+          name='home'
           size={30}
           color="#f39a4a"/>
       </PostList>
       <ContactButton>
         <MaterialIcons 
           onPress={handleNavigateContact}
-          name='reorder'
+          name='forum'
           size={30}
           color="#f39a4a"/>
       </ContactButton>

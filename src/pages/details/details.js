@@ -15,7 +15,7 @@ import {useRoute} from '@react-navigation/native'
 export default function Details () {
 
   const route = useRoute();
-  const {props} = route.params;
+  const {post} = route.params;
 
   return (
     <Container>
@@ -23,16 +23,16 @@ export default function Details () {
         <BoxImage>
           <Image
             source={{
-              uri: props.imageUrl,
+              uri: post.imageUrl,
             }}
           >
           </Image>
         </BoxImage>
         <BoxText>
-          <Data>{props.date}</Data>
-          <ArtistName>{props.author}</ArtistName>
-          <Title>{props.title}</Title>
-          <Article>{props.article.replace('<p>', '')}</Article>
+          <Data>{post.date}</Data>
+          <ArtistName>{post.author}</ArtistName>
+          <Title>{post.title}</Title>
+          <Article>{post.article.replace('<p>', '')}</Article>
         </BoxText>
       </ContainerView>  
       <TabBar/>

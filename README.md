@@ -2,9 +2,14 @@
 
 ## Teste para desenvolvedor [Coderockr](https://github.com/Coderockr)
 
-<b>Conectando a API</b> `https://stormy-shelf-93141.herokuapp.com/`
+<b>Conectando a API</b> https://stormy-shelf-93141.herokuapp.com/
 
 ---
+<h2><b><br/>Resultado final da aplicação</b></h2><br/>
+<p align="center"><img width="270" height="570" src="src/assets/app.gif"></p>
+
+---
+
 <h2><b><br/>Bibliotecas utilizadas no projeto</b></h2>
 
 - [React Native](https://reactnative.dev/)

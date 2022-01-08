@@ -1,10 +1,23 @@
 import {useState, useEffect} from 'react';
-import {Container, ListPost, ViewLoading, ActivityIndicatorPost} from './postsList.Styled'
+import {
+  Container,
+  ListPost, 
+  ViewLoading, 
+  ActivityIndicatorPost, 
+  ViewContainer,
+  ArtistName,
+  Title,
+  Article,
+  BoxImage,
+  Image,
+  BoxText,
+} from './postsList.Styled'
 import TabBar from '../../components/TabBar/tabBar';
 import api from '../../services/api';
-import BoxPost from '../../components/Post/Post';
+import {useNavigation} from '@react-navigation/native'
 
 export default function PostList () {
+  const navigation = useNavigation();
 
   const [posts, setPosts] = useState([])
   const [page, setPage] = useState(1)
@@ -30,8 +43,6 @@ export default function PostList () {
     setLoading(false);
   }
 
-  
-
   function FooterList ({load}) {
     if (!load) return null;
     return (
@@ -39,6 +50,10 @@ export default function PostList () {
         <ActivityIndicatorPost size={25} color="#000"/>
       </ViewLoading>
     )
+  }
+
+  function handlePageDetails (post) {
+    navigation.navigate('Details', {post});
   }
 
   return (
@@ -50,8 +65,23 @@ export default function PostList () {
         onEndReached={postList}
         onEndReachedThreshold={0.1}
         ListFooterComponent={<FooterList load={loading} />}
-        renderItem={({item: post}) => (
-          <BoxPost {...post} />)}
+        renderItem={({item: post}) => 
+          <ViewContainer onPress={() => handlePageDetails (post)}>
+            <BoxImage>
+              <Image
+                source={{
+                  uri: post.imageUrl,
+                }}
+              >
+              </Image>
+            </BoxImage>
+            <BoxText>
+                <ArtistName>{post.author}</ArtistName>
+                <Title>{post.title}</Title>
+                <Article>{post.article.replace('<p>', '')}</Article>
+            </BoxText>    
+          </ViewContainer>
+        }
       />
       <TabBar/>
     </Container>
