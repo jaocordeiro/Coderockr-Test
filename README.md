@@ -2,7 +2,7 @@
 
 ## Teste para desenvolvedor [Coderockr](https://github.com/Coderockr)
 
-<b>Conectando a API https://stormy-shelf-93141.herokuapp.com/</b>
+<b>Conectando a API</b> `https://stormy-shelf-93141.herokuapp.com/`
 
 ---
 <h2><b><br/>Bibliotecas utilizadas no projeto</b></h2>
