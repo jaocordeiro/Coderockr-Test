@@ -17,7 +17,7 @@ export default function Routes() {
           options={{
             title: 'Post List',
             headerStyle: {
-              backgroundColor: '#333333',
+              backgroundColor: '#6d6b6b',
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -31,7 +31,7 @@ export default function Routes() {
           options={{
             title: 'Contact',
             headerStyle: {
-              backgroundColor: '#333333',
+              backgroundColor: '#6d6b6b',
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -45,7 +45,7 @@ export default function Routes() {
           options={{
             title: 'Details',
             headerStyle: {
-              backgroundColor: '#333333',
+              backgroundColor: '#6d6b6b',
             },
             headerTintColor: '#fff',
             headerTitleStyle: {

@@ -6,7 +6,7 @@ export const ViewContainer = styled.TouchableOpacity`
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 10px;
-  padding-top: 0px;
+  padding-top: 0.2px;
 `;
 
 export const Container = styled.View`
@@ -14,7 +14,7 @@ export const Container = styled.View`
   height: 100%;
   flex-direction: row;
   background: #eaeaea;
-  padding-top: 1px;
+  padding-top: 0.2px;
 `;
 
 export const BoxImage = styled.View`
@@ -37,16 +37,16 @@ export const BoxText = styled.View`
 
 export const ArtistName = styled.Text`
   font-size: 14px;
-  font-weight: bold;
-`;
+  font-family: Nunito_800ExtraBold;
+  `;
 
 export const Title = styled.Text.attrs(() =>({
   ellipsizeMode: 'tail',
   numberOfLines: 2
 }))`
   font-size: 16px;
+  font-family: Nunito_700Bold;
   color: #F1A10A;
-  font-weight: bold;
   `;
 
 export const Article = styled.Text.attrs(() =>({
@@ -57,5 +57,4 @@ export const Article = styled.Text.attrs(() =>({
   font-size: 16px;
   text-align: justify;
 `;
-
 

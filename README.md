@@ -1,6 +1,9 @@
 <h2><b>Sobre</b></h2><br/>
 
-## Teste para desenvolvedor da [Coderockr](https://github.com/Coderockr)
+## Teste para desenvolvedor [Coderockr](https://github.com/Coderockr)
+
+<b>Conectando a API https://stormy-shelf-93141.herokuapp.com/</b>
+
 ---
 <h2><b><br/>Bibliotecas utilizadas no projeto</b></h2>
 

@@ -9,3 +9,10 @@ export const Container = styled.SafeAreaView`
 export const ListPost = styled.FlatList`
   width: 100%;
 `;
+
+export const ViewLoading = styled.View`
+  padding: 10px;
+`;
+
+export const ActivityIndicatorPost = styled.ActivityIndicator`
+`;

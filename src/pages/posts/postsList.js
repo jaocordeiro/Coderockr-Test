@@ -1,5 +1,5 @@
-import {React, useState, useEffect} from 'react';
-import {Container, ListPost} from './postsList.Styled'
+import {useState, useEffect} from 'react';
+import {Container, ListPost, ViewLoading, ActivityIndicatorPost} from './postsList.Styled'
 import TabBar from '../../components/TabBar/tabBar';
 import api from '../../services/api';
 import BoxPost from '../../components/Post/Post';
@@ -9,6 +9,10 @@ export default function PostList () {
   const [posts, setPosts] = useState([])
   const [page, setPage] = useState(1)
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    postList();
+  }, []);
 
   async function postList() {
     if(loading) return;
@@ -26,9 +30,16 @@ export default function PostList () {
     setLoading(false);
   }
 
-  useEffect(() => {
-    postList();
-  }, []);
+  
+
+  function FooterList ({load}) {
+    if (!load) return null;
+    return (
+      <ViewLoading>
+        <ActivityIndicatorPost size={25} color="#000"/>
+      </ViewLoading>
+    )
+  }
 
   return (
     <Container>
@@ -37,7 +48,8 @@ export default function PostList () {
         keyExtractor={post => String(post.id)}
         showsVerticalScrollIndicator={true}
         onEndReached={postList}
-        onEndReachedThreshold={0.9}
+        onEndReachedThreshold={0.1}
+        ListFooterComponent={<FooterList load={loading} />}
         renderItem={({item: post}) => (
           <BoxPost {...post} />)}
       />

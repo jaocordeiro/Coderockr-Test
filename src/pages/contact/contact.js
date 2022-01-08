@@ -1,4 +1,12 @@
-import {Container, FormContainer, LabelContact, AreaInput, PostTextArea, ButtonSubmit, NameButton} from './contact.Styled';
+import {
+    Container,
+    FormContainer,
+    LabelContact,
+    AreaInput,
+    PostTextArea,
+    ButtonSubmit,
+    NameButton
+  } from './contact.Styled';
 import TabBar from '../../components/TabBar/tabBar';
 import {MaterialIcons} from '@expo/vector-icons';
 
